@@ -3,7 +3,12 @@ import levels
 import turtle
 # import player
 
-turtle1 = turtle.Turtle()
+WIDTH, HEIGHT = (600, 600)
+
+win = turtle.Screen()
+win.title("Dungeon")
+win.setworldcoordinates(0, HEIGHT, WIDTH, 0)        # create window of size (WIDTH, HEIGHT) with (0, 0) on top left
+
 
 current_level = levels.level_1
 
