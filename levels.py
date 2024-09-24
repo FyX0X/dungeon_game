@@ -25,6 +25,3 @@ level_1 = [
 "XX         XXXXXXXXXXXXXX",
 "XXXXXXXXXXXXXXXXXXXXXXXXX"
 ]
-
-
-#test
