@@ -3,17 +3,21 @@ import levels
 import turtle
 # import player
 
-WIDTH, HEIGHT = (600, 600)
+
+WIDTH = 700
+HEIGHT = 800
 
 win = turtle.Screen()
 win.title("Dungeon")
-win.setworldcoordinates(0, HEIGHT, WIDTH, 0)        # create window of size (WIDTH, HEIGHT) with (0, 0) on top left
+win.setup(WIDTH, HEIGHT)
+win.bgcolor("black")
 
 
-current_level = levels.level_1
+current_dungeon = levels.Dungeon(levels.LEVEL_1, "white")    # load dungeon
+current_dungeon.draw()
 
-run = True
-while run:
-    pass
-    #player.move(arg)
-    # win.mainloop
+win.listen()
+
+
+# player.move(arg)
+win.mainloop()
