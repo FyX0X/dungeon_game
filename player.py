@@ -35,13 +35,4 @@ class Player(turtle.Turtle):
         
         #if (move_to_x, move_to_y) not in walls:
         self.goto(move_to_x, move_to_y)
-
-player = Player()
-
-#Keyboard bindings
-turtle.listen()
-turtle.onkey(player.go_up,"z")
-turtle.onkey(player.go_down,"s")
-turtle.onkey(player.go_left,"q")
-turtle.onkey(player.go_right,"d")
         
