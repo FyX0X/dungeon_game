@@ -37,6 +37,7 @@ class Dungeon:
         self.turtle.color(color)
         self.turtle.speed(0)
         self.turtle.penup()
+        self.walls =[]
 
     def draw(self):
         """
