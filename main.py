@@ -1,7 +1,7 @@
 import chest
 import levels
 import turtle
-# import player
+import player
 
 
 WIDTH = 700
