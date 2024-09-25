@@ -37,7 +37,6 @@ class Dungeon:
         self.turtle.color(color)
         self.turtle.speed(0)
         self.turtle.penup()
-        print(self.turtle.color())
 
     def draw(self):
         """
@@ -46,12 +45,10 @@ class Dungeon:
         self.turtle.speed(0)
         for y in range(len(self.level)):
             for x in range(len(self.level[y])):
-                print(self.level[y][x])
                 if self.level[y][x] == "X":
                     # calculate screen coord:
                     screen_x = -288 + 24*x
                     screen_y = 376 - 24*y
                     self.turtle.goto(screen_x, screen_y)
                     self.turtle.stamp()
-                    print("draw wall")
 
