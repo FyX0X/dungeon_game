@@ -4,8 +4,8 @@ import turtle
 import player as player_class
 
 
-WIDTH = 700
-HEIGHT = 800
+WIDTH = 1000
+HEIGHT = 700
 
 win = turtle.Screen()
 win.title("Dungeon")
