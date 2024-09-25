@@ -1,7 +1,7 @@
 import chest
 import levels
 import turtle
-import player
+import player as player_class
 
 
 WIDTH = 700
@@ -16,7 +16,7 @@ win.bgcolor("black")
 current_dungeon = levels.Dungeon(levels.LEVEL_1, "white")    # load dungeon
 current_dungeon.draw()
 
-player = Player()
+player = player_class.Player()
 
 turtle.listen()
 turtle.onkey(player.go_up,"z")
