@@ -16,8 +16,13 @@ win.bgcolor("black")
 current_dungeon = levels.Dungeon(levels.LEVEL_1, "white")    # load dungeon
 current_dungeon.draw()
 
-win.listen()
+player = Player()
 
+turtle.listen()
+turtle.onkey(player.go_up,"z")
+turtle.onkey(player.go_down,"s")
+turtle.onkey(player.go_left,"q")
+turtle.onkey(player.go_right,"d")
 
 # player.move(arg)
 win.mainloop()
