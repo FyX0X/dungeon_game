@@ -1,4 +1,6 @@
 import turtle
+import screen_script
+import player as player_class
 
 
 LEVEL_1 = [
@@ -38,6 +40,9 @@ class Dungeon:
         self.turtle.speed(0)
         self.turtle.penup()
 
+        self.player = None      # prepare to store player in dungeon object
+        self.walls = []      # prepare to store player in dungeon object
+
     def draw(self):
         """
         self.wall_turtle.penup()
@@ -47,8 +52,11 @@ class Dungeon:
             for x in range(len(self.level[y])):
                 if self.level[y][x] == "X":
                     # calculate screen coord:
-                    screen_x = -288 + 24*x
-                    screen_y = 376 - 24*y
+                    screen_x = screen_script.calculate_screen_x(x)
+                    screen_y = screen_script.calculate_screen_y(y)
                     self.turtle.goto(screen_x, screen_y)
                     self.turtle.stamp()
+
+                elif self.level[y][x] == "P":
+                    self.player = player_class.Player(x, y)
 
