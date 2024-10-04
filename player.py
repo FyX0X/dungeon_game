@@ -8,6 +8,7 @@ class Player(turtle.Turtle):
         self.color("blue")
         self.penup()
         self.speed(0)
+
         self.x = x
         self.y = y
         self.move_to_world(x, y)
