@@ -10,6 +10,7 @@ class Player(turtle.Turtle):
         self.speed(0)
         self.x = x
         self.y = y
+        self.move_to_world(x, y)
 
     def move_to_world(self, world_x, world_y):
         self.x = world_x
@@ -25,20 +26,20 @@ class Player(turtle.Turtle):
 
     def go_up(self):
         move_to_world_x = self.x
-        move_to_world_y = self.y + 1
+        move_to_world_y = self.y - 1
         
         #if (move_to_world_x, move_to_world_y) not in walls:
         self.move_to_world(move_to_world_x, move_to_world_y)
 
     def go_down(self):
         move_to_world_x = self.x
-        move_to_world_y = self.y -1
+        move_to_world_y = self.y + 1
         
         #if (move_to_world_x, move_to_world_y) not in walls:
         self.move_to_world(move_to_world_x, move_to_world_y)
             
     def go_left(self):
-        move_to_world_x = self.x -1
+        move_to_world_x = self.x - 1
         move_to_world_y = self.y
         
         #if (move_to_world_x, move_to_world_y) not in walls:
