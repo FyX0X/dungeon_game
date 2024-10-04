@@ -34,6 +34,7 @@ LEVEL_1 = [
 
 class Dungeon:
     def __init__(self, level, color="white"):
+
         self.level = level
         self.turtle = turtle.Turtle(shape="square", visible=True)
         self.turtle.color(color)
